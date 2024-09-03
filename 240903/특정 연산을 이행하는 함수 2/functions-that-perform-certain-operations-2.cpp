@@ -1,73 +1,28 @@
 #include <iostream>
-#include <queue>
-#include <cmath>
 #include <algorithm>
-
+#include <cmath>
 using namespace std;
-
-struct Node {
-	double n;
-	int level;
-};
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    double a[3];    
-    int s[3];
-    
-    for(int i = 0; i < 3; i++){
+    double a[3];
+    int r1, r2, r3;
+
+    for (int i = 0; i < 3; i++){
         cin >> a[i];
-        s[i] = 0;           
     }
-//160.22 111.22 659.28
-    if(a[0] > a[1]){
-        if(a[0] > a[2]){
-            s[0] = 1;
-            if(a[1] > a[2]){
-                s[1] = 2;
-                s[2] = 3;
-            }else s[1] = 3;
-            s[2] = 2;
-        }else 
-            s[0] = 2;
-            s[1] = 3;
-            s[2] = 1;
-        }
-    else if(a[0] < a[1]){
-        if(a[2] < a[1]){
-            s[1] = 1;
-            if(a[0] > a[2]){
-                s[0] = 2;
-                s[2] = 3;
-            }else
-                s[0] = 3;
-                s[2] = 2;
-        }else
-                s[2] = 1;
-                s[1] = 2;
-                s[0] = 3;            
-        }
 
+    sort(a, a+3);
 
-    queue<Node> qu;
-	qu.push({ a[0],s[0] }); // 노드 번호, 레벨
-    qu.push({ a[1],s[1] });
-    qu.push({ a[2],s[2] });
+    /*for (int i = 0; i < 3; i++){
+        cout << a[i] << " ";
+    }*/
 
-    while (!qu.empty()) {
-		Node now = qu.front();
-        int res = 0;
+    r1 = ceil(a[2]);
+    r2 = floor(a[0]);
+    r3 = round(a[1]);
 
-        if(now.level == 1){
-            res = ceil(now.n);
-        }else if (now.level == 2){
-            res = round(now.n);
-        }else res = floor(now.n);
-
-        cout << res << " ";
-
-		qu.pop();		
-	}
+    cout << r1 << " " << r2 << " " << r3;
 
     return 0;
 }
