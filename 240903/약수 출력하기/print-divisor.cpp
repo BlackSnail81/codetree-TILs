@@ -1,15 +1,13 @@
 #include<iostream>
 #include<queue>
 #include<functional>
-#include<vector>
 #include<cmath>
 using namespace std;
 
 int main()
 {
     priority_queue<int, vector<int>, greater<int>> pq;// min heap
-	//priority_queue<int, vector<int>, less<int>> pq2; // max heap ( priority_queue<int> pq2)
-
+	
 	int N, SQ;
     cin >> N;
 
@@ -23,11 +21,7 @@ int main()
             }
         }
     }
-    
-    //int vect[] = { 3,2,1,6,7,9 };
-	
-
-
+        
 	while (!pq.empty()) {
 		int ret = pq.top();
 		pq.pop();
