@@ -1,13 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int codetree(int n){
-    int cnt = 0;
+int cnt = 0;
+
+int codetree(int n){    
     cnt++;
     if (n < 2){        
         return cnt;        
     } else {
-        cnt += 2;
+        //cnt += 2;
         codetree(n-1) + codetree(n-2);
         return cnt;
     }
