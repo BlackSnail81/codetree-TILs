@@ -1,34 +1,26 @@
 #include <iostream>
-#include <queue>
 using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    queue<long>qu;
-
-    int n;
-    int p;
-    long cyres, ret;
-    int cycle = 0;
-
+    int n, p;
     cin >> n >> p;
 
-    cyres = n * n % p;
-    
-    qu.push(cyres);
-    cycle++;
+    int res;
+    int nres = 0;
+    int cycle = 1;
+    res = n * n % p;
+    nres = res * n % p;
 
-    cyres = cyres * n % p;
-
-    //cout << cyres << endl;
-    ret = qu.front();
-    //cout << ret << endl;
-
-    while(cyres!=qu.front()){
-        cyres = cyres * n % p;
-        qu.push(cyres);
+    while(res!=nres){
+        nres = nres * n % p;        
+        //nres:1,5,25
         cycle++;
-    }    
+        //cycle:1,2,3
+    }
+
     cout << cycle;
+
+
     return 0;
 }
