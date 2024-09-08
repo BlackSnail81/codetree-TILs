@@ -4,11 +4,11 @@ using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    queue<int>qu;
+    queue<long>qu;
 
     int n;
     int p;
-    int cyres, ret;
+    long cyres, ret;
     int cycle = 0;
 
     cin >> n >> p;
