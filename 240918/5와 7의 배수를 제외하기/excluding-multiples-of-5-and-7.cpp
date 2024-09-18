@@ -23,11 +23,14 @@ int main() {
 
     cout << sum << endl;   
 
-    avg = sum/cnt;
+    avg = round(sum/cnt);   
+
+
     cout << fixed;
     cout.precision(1);
+    cout << avg;
 
-    cout << round(avg); 
+    
 
 
     return 0;
