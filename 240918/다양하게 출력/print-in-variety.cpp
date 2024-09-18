@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    // 여기에 코드를 작성해주세요.
+    cout << "Total days in Year" << endl;
+    cout << 365 << endl;
+    cout << "Circumference rate" << endl;
+
+    cout << fixed;
+    cout.precision(10);
+    cout << 3.1415926535;
+    return 0;
+}
