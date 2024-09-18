@@ -14,11 +14,10 @@ int main() {
     for(int i = 0; i < n; i++){
         cin >> input;
 
-        if(input%5==0||input%7==0){            
-            cnt--;
-        }
-        else sum += input;
-        cnt++;
+        if(input%5!=0&&input%7!=0){            
+            sum += input;
+            cnt++;
+        }        
     }
 
     cout << sum << endl;   
