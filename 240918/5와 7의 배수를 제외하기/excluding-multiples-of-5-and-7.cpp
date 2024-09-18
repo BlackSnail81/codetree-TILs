@@ -7,7 +7,7 @@ int main() {
     int n, input;
     float sum = 0;
     float avg = 0;
-    float cnt = 0;
+    int cnt = 0;
 
     cin >> n;
 
