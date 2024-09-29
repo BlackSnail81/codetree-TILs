@@ -7,6 +7,10 @@ int main() {
     int m1 = 0;
     int m2 = 0;
 
+    //a = 83;
+    //b = -23;
+    //c = 5; 
+
     cin >> a >> b >> c;
 
     if(a >= b){
@@ -15,7 +19,7 @@ int main() {
         m1 = b;
 
     if(m1 >= c){
-        m2 = b;
+        m2 = m1;
     }else  
         m2 = c;
 
