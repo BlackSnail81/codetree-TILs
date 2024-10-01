@@ -24,6 +24,7 @@ int main() {
     if(avg >= 70){
     cout << avg;
     }else
+    cout << avg << endl;
     cout << "fail";
 
     return 0;
