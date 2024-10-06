@@ -15,9 +15,10 @@ int main() {
     cin >> n;
 
     for(int i = 0; i < n; i++){
+        
         cin >> input;
 
-        if(n%7==0){
+        if(input%7==0){
             cnt++;
             sum=sum+input;
         }
